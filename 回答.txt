@@ -1,0 +1,14 @@
+問題: Laravel Breezeを使用したログイン機能のカスタマイズ
+あなたは、Laravel Breezeを使って構築された新しいLaravelアプリケーションにおいて、既存のログイン機能をカスタマイズしたいと考えています。
+具体的には、ユーザーがログインに失敗した際に表示されるエラーメッセージをカスタマイズし、さらにログイン成功後のリダイレクト先をデフォルトのダッシュボードページから異なるページに変更したいと思っています。
+このカスタマイズを実装するためのステップを説明してください。
+
+A:
+1.ログイン失敗時に表示されるメッセージが英語表記で記載されている、resources/lang/en/auth.php ファイルを開いて、'failed' => 'These credentials do not match our records.', から　failed' =>　'エラーメッセージ'を入れる。
+2./Users/uozumikazuma/test-project_2/app/Providers/RouteServiceProvider.phpファイルを開いて、public const HOME = '/dashboard'の部分を移動したいホームディレクトリのパスに変更する。
+3.web.phpファイル内の Route::getのURLやviewの値を対象のファイル名に変更する。
+
+例
+Route::get('/CHAPTER2', function () {
+    return view('CHAPTER2');
+})->middleware(['auth', 'verified'])->name('CHAPTER2');
