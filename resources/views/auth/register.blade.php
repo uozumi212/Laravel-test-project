@@ -1,12 +1,12 @@
 <x-guest-layout>
-    <x-alert type="warning" :message="$errors->first()" class="my-4 text-white bg-green-700" />
+{{--    <x-alert type="warning" :message="$errors->first()" class="my-4 text-white bg-green-700" />--}}
 
-    <x-input-error :messages="$errors->get('name')" class="p-2 mt-2 text-white" />
-    <x-input-error :messages="$errors->get('email')" class="p-2 mt-2 text-white  bg-yellow-300" />
-    <x-input-error :messages="$errors->get('password')" class="p-2 mt-2  bg-red-500" />
+    <x-input-error :messages="$errors->get('name')" class="p-2 mt-2 text-white bg-yellow-400" />
+    <x-input-error :messages="$errors->get('email')" class="p-2 mt-2 text-white bg-yellow-400" />
+    <x-input-error :messages="$errors->get('password')" class="p-2 mt-2 text-white bg-red-400" />
 
 
-    <x-input-error :messages="$errors->get('password_confirmation')" class="p-2 mt-2  bg-yellow-500" />
+    <x-input-error :messages="$errors->get('password_confirmation')" class="p-2 mt-2  bg-red-400" />
 
 
     <x-alert type="error" :message="session('error_message')" class="my-4  bg-green-300" />
@@ -34,7 +34,7 @@
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="p-2 mt-2 text-white bg-yellow-300" />
+{{--            <x-input-error :messages="$errors->get('name')" class="p-2 mt-2 text-white bg-yellow-300" />--}}
         </div>
 
         <!-- Email Address -->
