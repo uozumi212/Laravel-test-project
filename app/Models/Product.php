@@ -10,5 +10,12 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $table = 'products';
+    protected $fillable = [
+        'name',
+        'price',
+
+    ];
+    public static function getAllProducts() {
+        return static::orderBy('name')->get();
+    }
 }

@@ -23,7 +23,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/products', [ProductController::class, 'index']);
+Route::resource('post', PostController::class);
+
+Route::resource('/product', ProductController::class);
 
 //Route::get('/CHAPTER2', function () {
 //    return view('CHAPTER2');
