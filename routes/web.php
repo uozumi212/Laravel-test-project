@@ -52,7 +52,7 @@ Route::get('post/index', [PostController::class, 'index'])->middleware('auth.che
 
 
 
-//Route::get('/products', [ProductController::class, 'index']);
+
 
 Route::get('/profile', function() {
     return view('profile.edit');
