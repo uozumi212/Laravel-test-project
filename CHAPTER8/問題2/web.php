@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\oldPostController;
 //use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,11 +37,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth.check'])->name('dashboard');
 
-Route::get('post/create', [PostController::class, 'create'])->middleware('auth.check');
+Route::get('post/create', [oldPostController::class, 'create'])->middleware('auth.check');
 
-Route::post('post', [PostController::class, 'store'])->name('post.store');
+Route::post('post', [oldPostController::class, 'store'])->name('post.store');
 
-Route::get('post/index', [PostController::class, 'index'])->middleware('auth.check')->name('post.index');
+Route::get('post/index', [oldPostController::class, 'index'])->middleware('auth.check')->name('post.index');
 
 
 //Route::get('post/create', [PostController::class, 'create'])->middleware(['auth', 'admin']);
