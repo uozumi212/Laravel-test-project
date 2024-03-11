@@ -52,6 +52,8 @@ Route::get('post/index', [PostController::class, 'index'])->middleware('auth.che
 
 
 
+Route::resource('post', PostController::class);
+
 
 
 Route::get('/profile', function() {
