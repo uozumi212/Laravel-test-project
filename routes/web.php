@@ -63,8 +63,6 @@ Route::resource('post',PostController::class);
 
 
 
-//Route::get('/products', [ProductController::class, 'index']);
-
 Route::get('/profile', function() {
     return view('profile.edit');
 });
