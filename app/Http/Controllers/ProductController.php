@@ -28,6 +28,5 @@ class ProductController extends Controller
     {
         $products = Product::orderBy('name', 'asc')->get();
 
-        return view('product.index', compact('products'));
     }
 }
