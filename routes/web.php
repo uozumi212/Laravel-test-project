@@ -33,13 +33,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-//CHAPTER8章用
-//Route::get('/dashboard', function () {
-//    return view('dashboard');
-//})->middleware(['auth.check'])->name('dashboard');
 
-//CHAPTER9章用
-//Route::get('post/{post}', [PostController::class, 'show'])->name('post.show');
 
 Route::resource('post',PostController::class);
 //Route::get('post/create', [PostController::class, 'create'])->middleware('auth.check');
